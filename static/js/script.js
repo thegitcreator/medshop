@@ -97,6 +97,22 @@ happyNewYear = {
 
 	sendOrder : () => {
 
+		let url = '/ajax.php',
+			data = {
+			'fio': $('[name=fio]'),
+			'phone': $('[name=phone]'),
+			'email': $('[name=email]'),
+			'comment': $('[name=comment]'),
+			};
+
+		$.ajax({
+			url: url,
+			type: "POST",
+			data: data,
+			success: (response) => {
+
+			}
+		});
 	},
 };
 
